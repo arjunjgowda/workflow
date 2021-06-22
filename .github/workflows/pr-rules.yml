@@ -7,7 +7,7 @@ on:
     
 jobs:
   print:
-    runs-on: [ubuntu ]
+    runs-on: [ubuntu-latest ]
     env:
       github: '${{ toJSON(github) }}'
     steps:
