@@ -3,7 +3,7 @@ name: PR workflow a path with filter
 on:
   pull_request:
     paths:
-    - 'packages/a/**'
+    - 'a/**'
     
 jobs:
   print:
