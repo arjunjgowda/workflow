@@ -1,0 +1,12 @@
+name: PR workflow - without filter
+
+on:
+  pull_request
+    
+jobs:
+  print:
+    runs-on: [ubuntu ]
+    env:
+      github: '${{ toJSON(github) }}'
+    steps:
+      - run: echo "${{github.event_name}} - ${{github.event.action}}"
