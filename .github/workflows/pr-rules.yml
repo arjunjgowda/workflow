@@ -1,0 +1,14 @@
+name: PR workflow a path with filter
+
+on:
+  pull_request:
+    paths:
+    - 'packages/a/**'
+    
+jobs:
+  print:
+    runs-on: [ubuntu ]
+    env:
+      github: '${{ toJSON(github) }}'
+    steps:
+      - run: echo "${{github.event_name}} - ${{github.event.action}}"
